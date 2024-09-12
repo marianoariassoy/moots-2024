@@ -1,0 +1,189 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Moots Cursos Online. Una plataforma de Pablo Martín Chef',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Cursos online',
+        href: '/cursos',
+      },
+      {
+        variant: 'secondary',
+        text: 'Registrarme',
+        href: '/registro',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="block">¡Aprendé hoy!</span>
+      <span>Cursos <span class="text-accent dark:text-white highlight">100% online</span></span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="inline sm:block"
+        >La plataforma de cocina vegana de <span class="font-semibold">Pablo Martín.</span>
+      </span>
+      <span>Sumale calidad a tu vida con los mejores cursos de alimentación.</span>
+    </Fragment>
+  </Hero>
+
+  <Features2
+    title="¡Hola! 👋"
+    subtitle="Bienvenido a tu espacio para transformar tu bienestar a través de la alimentación consciente y saludable. En nuestra plataforma, te ofrecemos una amplia variedad de cursos diseñados por expertos en nutrición, salud y bienestar, enfocados en enseñarte cómo hacer elecciones alimentarias que nutran tu cuerpo y tu mente."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <BlogLatestPosts
+    title="Encontrá el curso que necesitas"
+    information={`Descubre el poder de una alimentación consciente y comienza a nutrir tu cuerpo de manera integral con nuestros cursos. ¡Únete a nuestra comunidad y da el primer paso hacia un estilo de vida más saludable hoy mismo!
+                `}
+  />
+
+  <Features
+    id="features"
+    items={[
+      {
+        title: 'Acceso ilimitado',
+        description: 'Podrás ver tus clases las veces que quieras y cuando quieras desde cualquier parte del mundo.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Desde cualquier dispositivo',
+        description: 'Usa tu tablet, laptop,computadora o teléfono.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'A tu ritmo',
+        description: 'Maneja tus tiempos, sin fecha de comienzo, sin inscripción previa.',
+        icon: 'tabler:clock-hour-3',
+      },
+      {
+        title: 'Certificado de calidad',
+        description: 'Si algún curso no es de tu agrado ténes 48 hs. para pedir la devolución total del dinero.',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'Material teórico',
+        description: 'Para armar tus recetarios podrás descargar el material adicional de cada curso.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Grupo privado',
+        description: 'Comprando un curso o registrandote tendrás acceso a nuestro grupo privado de Telegram.',
+        icon: 'tabler:brand-telegram',
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    items={[
+      {
+        title: '¿A quienes están dirigidos los curso? ',
+        description: 'A todas las personas que buscan transformar su alimentación. ',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Cuáles son los requisitos previos? ',
+        description:
+          'Tener ganas de transformar tu alimentación y por ende tu vida. Somos lo que comemos, elegimos y hacemos',
+      },
+      {
+        title: '¿Cuándo inicia el curso? ',
+        description: 'Cuando vos quieras. Las clases son pre-grabadas, así que podes tomarlas a tu propio tiempo.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Puedo repetir el curso?',
+        description: `Podes ver las clases cuantas veces lo necesites.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <Stats
+    stats={[
+      { title: 'Alumnos', amount: '24K' },
+      { title: 'Cursos', amount: '20' },
+      { title: 'Clases', amount: '140' },
+      { title: 'Horas', amount: '120' },
+    ]}
+  />
+
+  <Testimonials
+    title="Lo que dicen nuestros alumnos"
+    testimonials={[
+      {
+        testimonial: `Desde que comenicí Moots, mi relación con la comida ha cambiado por completo. Los cursos son claros, fáciles de seguir y realmente transformadores. He aprendido no solo a elegir alimentos más saludables, sino también a comer de manera más consciente y a escuchar lo que mi cuerpo necesita. La plataforma me ha dado las herramientas para mejorar mi bienestar físico y mental, y ahora me siento con más energía y equilibrio en mi día a día. Recomendaría esta experiencia a cualquiera que quiera hacer un cambio real en su vida.`,
+        name: 'María Gonzalez',
+        job: 'Estudiante',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'María Gonzalez',
+        },
+      },
+      {
+        testimonial: `Tomar cursos ha sido una de las mejores decisiones que he tomado por mi salud. Antes de empezar, me sentía perdida con tantas dietas y consejos contradictorios en internet. Ahora, gracias a los expertos de la plataforma, he aprendido a hacer elecciones más conscientes y sostenibles. Además, las recetas y herramientas que ofrecen son prácticas y deliciosas. ¡No es solo un cambio en mi alimentación, sino en mi estilo de vida!`,
+        name: 'Carlos Aramendi',
+        job: 'Emplado',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Carlos Aramendi',
+        },
+      },
+      {
+        testimonial: `Lo que más me gusta de Moots es la manera en que enseñan sobre alimentación saludable sin que se sienta complicado o restrictivo. He aprendido a disfrutar de la comida de una forma completamente nueva, sabiendo que estoy nutriendo mi cuerpo y cuidando mi salud a largo plazo. La plataforma es muy fácil de usar y los cursos son dinámicos, lo que me ha mantenido motivada a lo largo del proceso. ¡Realmente siento que estoy invirtiendo en mi bienestar!`,
+        name: 'Lúcia Pereira',
+        job: 'Small business owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Lúcia Pereira',
+        },
+      },
+    ]}
+  />
+
+  <Steps2
+    title="Contacto"
+    subtitle="No dudes en ponerte en contacto con nosotros a través de los siguientes medios. Estamos aquí para ayudarle."
+    items={[
+      {
+        title: 'Email',
+        description: 'tallerespablomartin@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'WhatsApp',
+        description: '+54 9 11 37970736',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: 'Instagram',
+        description: '@pablomartinchef',
+        icon: 'tabler:brand-instagram',
+      },
+    ]}
+  />
+</Layout>
