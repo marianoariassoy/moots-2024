@@ -8,6 +8,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
+import HeroImage from '~/assets/images/hero.jpg';
+import Image from 'astro/components/Image.astro';
 
 const metadata = {
   title: 'Moots Cursos Online. Una plataforma de Pablo Martín Chef',
@@ -32,19 +34,33 @@ const metadata = {
   >
     <Fragment slot="title">
       <span class="block">¡Aprendé hoy!</span>
-      <span>Cursos <span class="text-accent dark:text-white highlight">100% online</span></span>
+      <span>Cursos <span class="text-primary dark:text-white">100% online</span></span>
     </Fragment>
     <Fragment slot="subtitle">
       <span class="inline sm:block"
         >La plataforma de cocina vegana de <span class="font-semibold">Pablo Martín.</span>
       </span>
-      <span>Sumale calidad a tu vida con los mejores cursos de alimentación.</span>
+      <span
+        >El espacio para transformar tu bienestar a través de la alimentación <span class="font-semibold"
+          >consciente y saludable.</span
+        ></span
+      >
     </Fragment>
   </Hero>
 
+  <div class="aspect-square lg:aspect-[16/5]">
+    <Image
+      class="w-full h-full object-cover object-center opacity-80"
+      src={HeroImage}
+      alt="Hero Image"
+      width={1920}
+      height={667}
+    />
+  </div>
+
   <Features2
-    title="¡Hola! 👋"
-    subtitle="Bienvenido a tu espacio para transformar tu bienestar a través de la alimentación consciente y saludable. En nuestra plataforma, te ofrecemos una amplia variedad de cursos diseñados por expertos en nutrición, salud y bienestar, enfocados en enseñarte cómo hacer elecciones alimentarias que nutran tu cuerpo y tu mente."
+    title="Encontrá el curso que necesitas"
+    subtitle="En nuestra plataforma, te ofrecemos una amplia variedad de cursos diseñados por expertos en nutrición, salud y bienestar, enfocados en enseñarte cómo hacer elecciones alimentarias que nutran tu cuerpo y tu mente. "
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -52,9 +68,18 @@ const metadata = {
   </Features2>
 
   <BlogLatestPosts
-    title="Encontrá el curso que necesitas"
-    information={`Descubre el poder de una alimentación consciente y comienza a nutrir tu cuerpo de manera integral con nuestros cursos. ¡Únete a nuestra comunidad y da el primer paso hacia un estilo de vida más saludable hoy mismo!
-                `}
+    title="Cursos de cocina basados en plantas"
+    information={`La alimentación a base de plantas es un patrón de consumo centrado en frutas, verduras, legumbres, semillas y granos enteros, excluyendo la ingesta de carnes de cualquier origen, lácteos, huevo, productos refinados y procesados.`}
+  />
+
+  <BlogLatestPosts
+    title="Clases de cocina con Pablo Martín"
+    information={`Descubrí el poder de una alimentación consciente y comenzá a nutrir tu cuerpo de manera integral con nuestros cursos. ¡Únite a nuestra comunidad y da el primer paso hacia un estilo de vida más saludable hoy mismo!`}
+  />
+
+  <BlogLatestPosts
+    title="Otros cursos que pueden interesarte"
+    information={`Más cursos que puedes encontrar en nuestra plataforma. ¡Aprende de la mejor manera posible!`}
   />
 
   <Features
@@ -93,6 +118,15 @@ const metadata = {
     ]}
   />
 
+  <Stats
+    stats={[
+      { title: 'Alumnos', amount: '24000' },
+      { title: 'Cursos', amount: '32' },
+      { title: 'Clases', amount: '140' },
+      { title: 'Horas', amount: '1200' },
+    ]}
+  />
+
   <FAQs
     title="Preguntas Frecuentes"
     items={[
@@ -122,15 +156,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </FAQs>
-
-  <Stats
-    stats={[
-      { title: 'Alumnos', amount: '24K' },
-      { title: 'Cursos', amount: '20' },
-      { title: 'Clases', amount: '140' },
-      { title: 'Horas', amount: '120' },
-    ]}
-  />
 
   <Testimonials
     title="Lo que dicen nuestros alumnos"

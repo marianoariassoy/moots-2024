@@ -26,17 +26,18 @@ const {
 
 const seoProps: AstroSeoProps = merge(
   {
-    title: '',
+    title: 'Moots Cursos Online. Una plataforma de Pablo Martín Chef',
     titleTemplate: '%s',
     canonical: canonical,
     noindex: true,
     nofollow: true,
-    description: undefined,
+    description:
+      'Descubrí el poder de una alimentación consciente y comenzá a nutrir tu cuerpo de manera integral con nuestros cursos. ¡Únite a nuestra comunidad y da el primer paso hacia un estilo de vida más saludable hoy mismo!',
     openGraph: {
       url: canonical,
       site_name: SITE?.name,
       images: [],
-      locale: I18N?.language || 'en',
+      locale: I18N?.language || 'es',
       type: 'website',
     },
     twitter: {
